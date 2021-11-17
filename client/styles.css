@@ -1,0 +1,214 @@
+:root {
+    --main-font-color: #ffffff;
+    --secondary-font-color: #747f8d;
+    --edges-background-color: #202225;
+    --main-background-color: #2f3136;
+    --blocks-background-color: #36393f;
+    --special-button-color: #cd943c;
+    --special-button-color-hover: #b6850b;
+    --special-button-color-active: #8f7505;
+    --warning-color: #ff0000;
+}
+
+
+html ::selection {
+    background-color: var(--main-background-color);
+    color: var(--main-font-color);
+}
+
+html, body {
+    height: 100%;
+}
+
+.header_text {
+    font-family: serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+    color: var(--main-font-color);
+}
+
+#lab {
+    color: #e3af2e;
+}
+
+header {
+    background-color: var(--edges-background-color);
+}
+
+body {
+    background-color: var(--main-background-color);
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    color: var(--main-font-color);
+    font-family: Arial, serif;
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+/* Селектор дочерних элементов */
+.content > h1 {
+    text-align: center;
+    font-family: serif;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.content_block > h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Расположение основного контента */
+#content_blocks {
+    justify-content: center;
+    margin-outside: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Блоки основного контента */
+.content_block {
+    background-color: var(--blocks-background-color);
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 20px;
+    display: inline-block;
+    align-items: center;
+    margin: 20px; /* расстояние между блоками */
+}
+
+.content_block#results {
+    width: 100%;
+    max-width: 700px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+footer {
+    background-color: var(--edges-background-color);
+    font-family: Tahoma, serif;
+    font-size: 18px;
+    color: var(--secondary-font-color);
+    width: 100%;
+    flex-shrink: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+    Селектор идентификаторов (один из многих)
+ */
+#footer_text {
+    text-align: center;
+}
+
+#graph-picture {
+    background: url("resources/area1.png");
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    filter: invert(85%);
+}
+
+#graph-picture:hover {
+    background: url("resources/shrek.jpeg");
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    filter: none;
+}
+
+.special_button {
+    background-color: var(--special-button-color);
+    width: 50%;
+    border: none;
+    border-radius: 5%;
+    text-decoration: none;
+    color: var(--main-font-color);
+    font-size: 20px;
+}
+
+.special_button:hover {
+    background-color: var(--special-button-color-hover);
+    box-shadow: 0 0 10px var(--edges-background-color);
+}
+
+.special_button:active {
+    background-color: var(--special-button-color-active);
+}
+
+.special_button:disabled {
+    background-color: var(--edges-background-color);
+    color: var(--main-background-color);
+    box-shadow: none;
+}
+
+.special_black_button {
+    background-color: var(--edges-background-color);
+}
+
+.input_form {
+    font-family: "Montserrat", "Open Sans", sans-serif;
+    font-size: 15pt;
+    line-height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+button {
+    background-color: var(--edges-background-color);
+    border: none;
+    border-radius: 5%;
+    font-size: 120%;
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+button.selected_button {
+    background-color: var(--special-button-color);
+}
+
+input[type=checkbox], input[type=text] {
+    transform: scale(1.5);
+}
+
+label[for="Y"] {
+    padding-right: 50px;
+}
+
+table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    border-style: hidden;
+    word-break: break-word;
+}
+
+th, td {
+    border: transparent;
+    padding: 10px 15px;
+    background-color: var(--edges-background-color);
+    word-break: keep-all;
+    text-align: center;
+}
+
+span.successful {
+    color: lawngreen;
+}
+
+span.missed {
+    color: red;
+}

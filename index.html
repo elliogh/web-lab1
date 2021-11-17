@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Первая лаба</title>
+    <link href="client/styles.css" rel="stylesheet" type="text/css">
+</head>
+<header>
+    <div class="header_text">
+        <div id="lab">Лабораторная работа №1</div>
+        <div id="name">Целиков Данил Игоревич, группа P3212, вариант 12023</div>
+    </div>
+</header>
+<body>
+<div class="content">
+    <h1>Проверка попадания точки в выделенную площадь</h1>
+    <div id="content_blocks">
+        <div class="content_block" id="graph-picture"></div>
+        <div class="content_block" id="inputs">
+            <h1>Ввод параметров</h1>
+            <form class="input_form" id="values_selection">
+                <div id="x_input_block">
+                    <div class="radio_block">
+                        <label>X: </label>
+                        <input name="x" type="radio" onclick="changeX(this)" value="-5"> -5
+                        <input name="x" type="radio" onclick="changeX(this)" value="-4"> -4
+                        <input name="x" type="radio" onclick="changeX(this)" value="-3"> -3
+                        <input name="x" type="radio" onclick="changeX(this)" value="-2"> -2
+                        <input name="x" type="radio" onclick="changeX(this)" value="-1"> -1
+                        <input name="x" type="radio" onclick="changeX(this)" value="0"> 0
+                        <input name="x" type="radio" onclick="changeX(this)" value="1"> 1
+                        <input name="x" type="radio" onclick="changeX(this)" value="2"> 2
+                        <input name="x" type="radio" onclick="changeX(this)" value="3"> 3
+                    </div>
+                </div>
+                <div id="y_input_block">
+                    <label for="Y">Y:</label>
+                    <input id="Y" maxlength="15" name="y"
+                           onfocusout="this.reportValidity()" oninput='setCustomValidity(""); checkY(this)'
+                           placeholder="(-3 ... 5)" type="text" value="">
+                </div>
+                <div id="r_input_block">
+                    <div class="checkbox_block">
+                        <label>R: </label>
+                        <input name = "r" onclick="changeR(this)" type="checkbox" value="1">1
+                        <input name = "r" onclick="changeR(this)" type="checkbox" value="1.5">1.5
+                        <input name = "r" onclick="changeR(this)" type="checkbox" value="2">2
+                        <input name = "r" onclick="changeR(this)" type="checkbox" value="2.5">2.5
+                        <input name = "r" onclick="changeR(this)" type="checkbox" value="3">3
+                    </div>
+                </div>
+                <button class="special_button" disabled id="submit_button" type="submit">
+                    Отправить
+                </button>
+                <button class="special_button special_black_button" id="clear_button" type="button">Очистить</button>
+            </form>
+        </div>
+        <div class="content_block" id="results">
+            <table id="results_table">
+                <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Время запуска</th>
+                    <th>Время работы</th>
+                    <th>Результат</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <div id="footer_text">
+        Санкт-Петербург <br>
+        Ноябрь, 2021
+    </div>
+</footer>
+<script type="text/javascript" src="client/script.js"></script>
+</html>
